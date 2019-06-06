@@ -10,7 +10,7 @@ Just run `make all`. There are no dependencies.
 
 ### Sample program
 
-Provide as many strings as you want. The programm will hash all of them in order.
+Provide as many strings as you want. The program will hash all of them in order.
 
 ```
 $ ./SHA256 "string" "string2"
