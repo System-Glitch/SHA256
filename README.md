@@ -32,5 +32,5 @@ uint8_t * digest = sha.digest();
 
 std::cout << SHA256::toString(digest) << std::endl;
 
-delete digest; // Don't forget to free the digest!
+delete[] digest; // Don't forget to free the digest!
 ```

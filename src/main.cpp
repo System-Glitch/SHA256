@@ -12,7 +12,7 @@ int main(int argc, char ** argv) {
 
 		std::cout << SHA256::toString(digest) << std::endl;
 
-		delete digest;
+		delete[] digest;
 	}
 
 	return EXIT_SUCCESS;
