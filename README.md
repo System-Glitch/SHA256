@@ -34,3 +34,19 @@ std::cout << SHA256::toString(digest) << std::endl;
 
 delete[] digest; // Don't forget to free the digest!
 ```
+
+## Using tipi.build to install SHA256
+
+`SHA256` can be easily used with the [tipi.build](https://tipi.build) dependency manager, by adding the following to a `.tipi/deps`:
+
+```json
+{
+    "System-Glitch/SHA256": { }
+}
+```
+
+An example to try is available in `https://github.com/tipi-deps/example-System-Glitch-SHA256` (change the target name appropriately to `linux` or `macos` or `windows`):
+
+```bash
+tipi . -t <target>
+```
