@@ -4,6 +4,8 @@ A C++ SHA256 implementation.
 
 ## Build
 
+**Minimum C++11.**
+
 Just run `make all`. There are no dependencies.
 
 ## Example usage
