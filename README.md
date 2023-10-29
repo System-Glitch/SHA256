@@ -28,11 +28,9 @@ b993212a26658c9077096b804cdfb92ad21cf1e199e272c44eb028e45d07b6e0
 string s = "hello world";
 SHA256 sha;
 sha.update(s);
-uint8_t * digest = sha.digest();
+std::array<uint8_t, 32> digest = sha.digest();
 
 std::cout << SHA256::toString(digest) << std::endl;
-
-delete[] digest; // Don't forget to free the digest!
 ```
 
 ## Using tipi.build to install SHA256

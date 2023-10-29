@@ -31,8 +31,8 @@ void SHA256::update(const std::string &data) {
 	update(reinterpret_cast<const uint8_t*> (data.c_str()), data.size());
 }
 
-uint8_t * SHA256::digest() {
-	uint8_t * hash = new uint8_t[32];
+std::array<uint8_t,32> SHA256::digest() {
+	std::array<uint8_t,32> hash;
 
 	pad();
 	revert(hash);
@@ -131,7 +131,7 @@ void SHA256::pad() {
 	transform();
 }
 
-void SHA256::revert(uint8_t * hash) {
+void SHA256::revert(std::array<uint8_t, 32> & hash) {
 	// SHA uses big endian byte ordering
 	// Revert all bytes
 	for (uint8_t i = 0 ; i < 4 ; i++) {
@@ -141,7 +141,7 @@ void SHA256::revert(uint8_t * hash) {
 	}
 }
 
-std::string SHA256::toString(const uint8_t * digest) {
+std::string SHA256::toString(const std::array<uint8_t, 32> & digest) {
 	std::stringstream s;
 	s << std::setfill('0') << std::hex;
 
