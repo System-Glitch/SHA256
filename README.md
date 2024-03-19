@@ -8,6 +8,10 @@ A C++ SHA256 implementation.
 
 Just run `make all`. There are no dependencies.
 
+## ⚠️ DISCLAIMER
+
+This library has been developed for research and learning purposes. It **has not been audited** for security nor compliance with the standard. It is not advised to use it in projects where security is important. Use wide-spread and reliable libraries such as [OpenSSL](https://www.openssl.org/) instead.
+
 ## Example usage
 
 ### Sample program
